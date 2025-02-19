@@ -30,6 +30,9 @@ func main() {
 	fmt.Println("Server running on port", port)
 	fmt.Println("Link to server: http://localhost" + port)
 
+  // check jwt token
+	fmt.Println("Checking JWT token..." + cfg.JWTSecret)
+
 	if err := router.Run(port); err != nil {
 		log.Fatalf("Failed to start server: %v", err)
 	}

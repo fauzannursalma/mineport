@@ -12,5 +12,4 @@ type Project struct {
 	Image       string
 
 	User User `gorm:"foreignKey:UserID;constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
-
 }
